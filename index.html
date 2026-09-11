@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcola la tua RAL - 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main>
+
+    <section class="calculator">
+
+      <h1>Calcola la tua RAL</h1>
+      <p class="version">v. 2026</p>
+
+      <p>Inserisci la tua RAL annuale lorda</p>
+
+      <input type="number" id="ral" placeholder="Es. 35000" min="0">
+      <p id="inputError" class="input-error"></p>
+
+      <button id="calculateBtn">Calcola</button>
+
+      <p class="disclaimer">
+        Stima 2026 per lavoratore dipendente privato non agricolo, a tempo indeterminato e residente a Reggio Emilia.
+      </p>
+
+      <div id="result" class="result-card">
+
+        <button id="closeResult" class="close-result" aria-label="Chiudi risultati">
+          ×
+        </button>
+
+        <h2>Il tuo netto stimato</h2>
+
+        <div class="result-row">
+          <span>RAL</span>
+          <strong id="resultRal">35.000,00 €</strong>
+        </div>
+
+        <div class="result-row">
+          <span>Contributi INPS</span>
+          <strong id="resultContributi">- 3.216,50 €</strong>
+          <small id="descriptionContributi">
+            9,19% a carico del lavoratore
+          </small>
+        </div>
+
+        <div class="result-row">
+          <span>IRPEF lorda</span>
+          <strong id="resultIrpefLorda">- 7.688,56 €</strong>
+          <small id="descriptionIrpefLorda">
+            Applicati gli scaglioni IRPEF 2026
+          </small>
+        </div>
+
+        <div class="result-row">
+          <span>Detrazione lavoro dipendente</span>
+          <strong id="resultDetrazioneLavoro">+ 1.646,52 €</strong>
+          <small id="descriptionDetrazioneLavoro">
+            Compresa la maggiorazione prevista di 65 €
+          </small>
+        </div>
+
+        <div class="result-row">
+          <span>Cuneo fiscale</span>
+          <strong id="resultCuneo">+ 1.000,00 €</strong>
+          <small id="descriptionCuneo">
+            Applicato in base alla fascia di reddito
+          </small>
+        </div>
+
+        <div class="result-row">
+          <span>Trattamento integrativo</span>
+          <strong id="resultTrattamentoIntegrativo">+ 0,00 €</strong>
+          <small id="descriptionTrattamentoIntegrativo">
+            Non previsto per questa fascia di reddito
+          </small>
+        </div>
+
+        <div class="result-row">
+          <span>Addizionale regionale</span>
+          <strong id="resultAddizionaleRegionale">- 555,58 €</strong>
+          <small id="descriptionAddizionaleRegionale">
+            Regione Emilia-Romagna
+          </small>
+        </div>
+
+        <div class="result-row">
+          <span>Addizionale comunale</span>
+          <strong id="resultAddizionaleComunale">- 254,27 €</strong>
+          <small id="descriptionAddizionaleComunale">
+            Comune di Reggio Emilia
+          </small>
+        </div>
+
+        <div class="net-total">
+          <p>Netto annuale stimato</p>
+          <strong id="resultNettoAnnuale">25.931,61 €</strong>
+
+          <p>Netto medio su 13 mensilità</p>
+          <strong id="resultNettoMensile">1.994,74 €</strong>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
